@@ -13,18 +13,16 @@ end
 -- map("n","","",{silent = true})
 
 -- some basic mapping for show file 
-map("n","<F1>","<cmd>lua require('telescope.builtin').help_tags()<cr>",{silent = true})
 map("n","<C-p>","<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown())<cr>",{silent = true})
 map("n","<leader>i","<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_ivy())<cr>",{silent = true})
 map("n","<leader>c","<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_cursor())<cr>",{silent = true})
-map("n","<leader>lg","<cmd>lua require('telescope.builtin').live_grep()<cr>",{silent = true})
+map("n","<leader>lg","<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy())<cr>",{silent = true})
 
 
 --help setting 
 --map("n","","",{silent = true})
 
 require("telescope").setup({
-    coc = {theme = 'ivy'},
     defaults = {
         sorting_strategy = "ascending",
         prompt_prefix = "  ",
@@ -49,4 +47,5 @@ require("telescope").setup({
     },
 })
 
-map("n","<leader>5",":Telescope coc file_code_actions<Cr> ",{silent = true})
+map("n","<leader>5","<cmd> lua require('telescope').load_extension('coc').file_code_actions(require('telescope.themes').get_dropdown())<cr>",{silent = false})
+require('telescope').load_extension('harpoon')

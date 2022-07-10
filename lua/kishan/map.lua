@@ -12,7 +12,7 @@ map("n","<leader>t",":call TrimWhitespace()<CR>",{silent = true})
 
 -- alter + up down j and k mapping
 -- alter j
-map("i","<A-j>","<Esc>:m+<cr>==gi",{silent = true})
+map("i","A-j>","<Esc>:m+<cr>==gi",{silent = true})
 map("n","<A-j>",":m+<cr>==",{silent = true})
 map("v","<A-j>",":m'>+<cr>gv=gv",{silent = true})
 --alter k
@@ -36,8 +36,15 @@ map("n","<C-j>","<C-w><C-j>",{silent = true})
 map("n","<C-l>","<C-w><C-l>",{silent = true})
 
 
---source  file  setting 
+--source  file  setting
 map("n","<leader>r","<cr>",{silent = true})
 
 -- maximizer thing
-map("n","<leader>m",":resize 100<Cr>",{silent = true})
+map("n","<leader>m",":resize 100!!<Cr>",{silent = true})
+
+
+-- functon key may
+map("n","<F1>","<cmd>lua require('telescope.builtin').help_tags(require('telescope.themes').get_ivy())<cr>",{silent = true})
+map("n","<F2>","<Plug>(coc-rename)",{silent = false})
+-- f3 is the map for harpoon.lua
+map("n","<F5>",":lua package.loaded.kishan = nil<cr>:so $MYVIMRC<cr>:lua print('reloaded')<cr>",{silent = true})

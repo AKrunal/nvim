@@ -17,6 +17,6 @@ map("n","<leader>gc",":G commit<cr>",{silent = true})
 map("n","<leader>gc",":G commit<cr>",{silent = true})
 
 map("n","<leader>gp",":G push<cr>",{silent = true})
-map("n","<leader>gw",":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>",{silent = true})
-map("n","<leader>6",":Telescope git_worktree create_git_worktree<Cr>",{silent = true})
+map("n","<leader>gw",":lua require('telescope').extensions.git_worktree.git_worktrees(require('telescope.themes').cursor())<CR>",{silent = true})
+map("n","<leader>6","<cmd> lua require('telescope').load_extension('git_worktree').create_git_worktree(require('telescope.themes').get_dropdown())<Cr>",{silent = true})
 

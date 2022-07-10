@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 local Plug = vim.fn['plug#']
 
+
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- basic
@@ -10,8 +11,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs' -- { to {} commplate
 
 
+--text file 
+Plug 'dkarter/bullets.vim'
+
 --coc
 Plug 'neoclide/coc.nvim'
+
 
 -- fuzzy finder
 Plug 'https://github.com/nvim-telescope/telescope.nvim.git'
