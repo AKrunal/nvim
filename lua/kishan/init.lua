@@ -1,2 +1,6 @@
 require('kishan.map')
 require('kishan.telescope')
+require('kishan.git')
+require('kishan.gitworktree')
+require('kishan.coc')
+require('kishan.lsp')

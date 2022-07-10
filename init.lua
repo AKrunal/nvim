@@ -26,13 +26,17 @@ Plug 'tpope/vim-fugitive'
 Plug 'ThePrimeagen/git-worktree.nvim'
 
 
---extra feture 
+--extra feture
 Plug 'ThePrimeagen/harpoon'
 Plug 'https://github.com/ThePrimeagen/refactoring.nvim.git'
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter.git'
 Plug 'scrooloose/nerdcommenter'
 
 
-vim.call('plug#end')
+--lsp
+Plug 'https://github.com/neovim/nvim-lspconfig.git'
+Plug 'https://github.com/github/copilot.vim.git'
 
+vim.call('plug#end')
 require('kishan')
+

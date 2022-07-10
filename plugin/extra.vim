@@ -4,3 +4,7 @@ function! TrimWhitespace()
     %s/\\\@<!\s\+$//e
     call winrestview(l:save)
 endfunction
+
+"commnerer
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
