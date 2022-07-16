@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+
 local Plug = vim.fn['plug#']
 
 
@@ -11,7 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs' -- { to {} commplate
 
 
---text file 
+--text file
 Plug 'dkarter/bullets.vim'
 
 --coc
@@ -41,6 +42,13 @@ Plug 'scrooloose/nerdcommenter'
 --lsp
 Plug 'https://github.com/neovim/nvim-lspconfig.git'
 Plug 'https://github.com/github/copilot.vim.git'
+
+--debug
+Plug 'https://github.com/mfussenegger/nvim-dap.git'
+Plug 'https://github.com/nvim-telescope/telescope-dap.nvim.git'
+Plug 'https://github.com/rcarriga/nvim-dap-ui.git'
+Plug 'https://github.com/leoluz/nvim-dap-go.git'
+Plug 'https://github.com/mfussenegger/nvim-dap-python.git'
 
 vim.call('plug#end')
 require('kishan')

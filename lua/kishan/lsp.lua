@@ -26,7 +26,23 @@ require("lspconfig").sumneko_lua.setup({
     },
 })
 
-require("lspconfig").pyright.setup({})
+require("lspconfig").pyright.setup({
+ cmd = { "pyright-langserver", "--stdio" },
+ filetypes = { "python" },
+    --root_dir = function(startpath)
+    --       return M.search_ancestors(startpath, matcher)
+    --  end,
+    settings = {
+      python = {
+        analysis = {
+          autoSearchPaths = true,
+          diagnosticMode = "workspace",
+          useLibraryCodeForTypes = true
+        },
+      },
+    },
+    single_file_support = true
+})
 require("lspconfig").gopls.setup({
     on_attach = function ()
         vim.keymap.set("n","K",vim.lsp.buf.hover,{buffer = 0})

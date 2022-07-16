@@ -1,0 +1,6 @@
+2. <f4> fech thing planing
+5. <f8> run entier project or file
+3. <f9> for debugging
+4. <f10> for running function and pice of code
+6. create new file
+7. delete new file
