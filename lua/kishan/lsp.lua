@@ -7,6 +7,9 @@ require("lspconfig").sumneko_lua.setup({
         Lua = {
             runtime = {
                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                diagnostics = {
+                    globals = {"vim"}
+                },
                 version = "LuaJIT",
                 -- Setup your lua path
                 path = vim.split(package.path, ";"),

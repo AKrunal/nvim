@@ -8,7 +8,7 @@ core
 * `<A-k>` && `<A-up>` 1 line up of selected line or current line
 * `<F1>` open telescope help
 * `<F2>` rename variable(function) with coc
-* `<leader>%` split the file in vertical split
+* `<leader>%` 
 
 Telescope `kishan/telescope.lua`
 * `ctrl+p` open telescope window which has all files

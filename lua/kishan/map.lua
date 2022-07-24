@@ -41,8 +41,15 @@ mapping("n","<C-l>","<C-w><C-l>",{silent = true})
 mapping("n","<F1>","<cmd>lua require('telescope.builtin').help_tags(require('telescope.themes').get_ivy())<cr>",{silent = true})
 mapping("n","<F2>","<Plug>(coc-rename)",{silent = false})
 -- f3 is the map for harpoon.lua
-mapping("n","<F5>",":lua package.loaded.kishan = nil<cr>:so $MYVIMRC<cr>:lua print('reloaded')<cr>",{silent = true})
 
 
 
 mapping("n","<leader>%",":vsplit<cr>",{silent = true})
+
+mapping("n","<leader>n",":cnext<cr>zz")
+mapping("n","<leader>p",":cprev<cr>zz")
+
+--display setting
+
+mapping("n","<F5>",":Goyo<cr>",{silent = true})
+mapping("n","<leader>l",":Limelight!!<cr>",{silent = true})

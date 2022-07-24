@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 local function reload_coc()
-    vim.cmd("!cd plugged/coc.nvim && git checkout release")
+    vim.cmd("!cd ~/.config/nvim/plugged/coc.nvim && git checkout release")
 end
 
 vim.keymap.set("n","<leader>coc",reload_coc,{noremap=true})

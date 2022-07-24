@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
-local Plug = vim.fn['plug#']
 
+local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
@@ -30,6 +30,7 @@ Plug 'https://github.com/kyazdani42/nvim-web-devicons.git'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'tpope/vim-fugitive'
 Plug 'ThePrimeagen/git-worktree.nvim'
+Plug 'https://github.com/tpope/vim-rhubarb.git'
 
 
 --extra feture
@@ -49,6 +50,18 @@ Plug 'https://github.com/nvim-telescope/telescope-dap.nvim.git'
 Plug 'https://github.com/rcarriga/nvim-dap-ui.git'
 Plug 'https://github.com/leoluz/nvim-dap-go.git'
 Plug 'https://github.com/mfussenegger/nvim-dap-python.git'
+
+
+--for go only
+Plug 'https://github.com/fatih/vim-go.git'
+
+--for display
+Plug 'https://github.com/junegunn/goyo.vim.git'
+Plug 'https://github.com/junegunn/limelight.vim.git'
+
+
+--my plug
+--Plug '/home/kishan/plugins/stackmap.nvim/'
 
 vim.call('plug#end')
 require('kishan')
