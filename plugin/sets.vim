@@ -23,6 +23,8 @@ set termguicolors
 set scrolloff=8
 " set noshowmode
 set signcolumn=yes
+set ls=3 " to set globel status line
+"set highlight WinSeparator
 set isfname+=@-@
 " set ls=0
 
@@ -45,7 +47,7 @@ set backspace=indent,eol,start
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 set incsearch ignorecase smartcase hlsearch
 "set wildmode=longest,list,full wildmenu
-set ruler laststatus=2 showcmd showmode
+set ruler laststatus=3 showcmd showmode
 set list listchars=trail:»,tab:»-
 set backspace=indent,eol,start
 set fillchars+=vert:\
@@ -68,3 +70,4 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
+

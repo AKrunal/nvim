@@ -7,6 +7,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- basic
 Plug 'https://github.com/luisiacc/gruvbox-baby.git'
+Plug 'https://github.com/folke/tokyonight.nvim.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs' -- { to {} commplate
@@ -42,7 +43,11 @@ Plug 'scrooloose/nerdcommenter'
 
 --lsp
 Plug 'https://github.com/neovim/nvim-lspconfig.git'
-Plug 'https://github.com/github/copilot.vim.git'
+--Plug 'https://github.com/github/copilot.vim.git'
+
+
+--formater
+Plug 'https://github.com/prettier/vim-prettier.git'
 
 --debug
 Plug 'https://github.com/mfussenegger/nvim-dap.git'
@@ -61,8 +66,27 @@ Plug 'https://github.com/junegunn/limelight.vim.git'
 
 
 --my plug
---Plug '/home/kishan/plugins/stackmap.nvim/'
+Plug '/home/kishan/plugins/Runner/'
+
+Plug 'https://github.com/nvim-lua/plenary.nvim.git'
+
+--lua with help
+Plug 'https://github.com/nanotee/luv-vimdocs.git'
+Plug 'https://github.com/milisims/nvim-luaref.git'
 
 vim.call('plug#end')
 require('kishan')
 
+-- makking plugins
+RELOAD = function(...)
+    return require("plenary.reload").reload_module(...)
+end
+
+R = function(v)
+    RELOAD(v)
+    return require(v)
+end
+P = function(v)
+    print(vim.inspect(v))
+    return v
+end
