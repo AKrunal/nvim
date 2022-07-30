@@ -11,6 +11,7 @@ Plug 'https://github.com/folke/tokyonight.nvim.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs' -- { to {} commplate
+Plug 'https://github.com/mbbill/undotree.git'
 
 
 --text file
@@ -53,7 +54,7 @@ Plug 'https://github.com/prettier/vim-prettier.git'
 Plug 'https://github.com/mfussenegger/nvim-dap.git'
 Plug 'https://github.com/nvim-telescope/telescope-dap.nvim.git'
 Plug 'https://github.com/rcarriga/nvim-dap-ui.git'
-Plug 'https://github.com/leoluz/nvim-dap-go.git'
+Plug 'https://github.com/leoluz/nvim-dap-go.git' --go-dap
 Plug 'https://github.com/mfussenegger/nvim-dap-python.git'
 
 
@@ -90,3 +91,5 @@ P = function(v)
     print(vim.inspect(v))
     return v
 end
+
+require('runner').setcommand()

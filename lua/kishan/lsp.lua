@@ -1,4 +1,6 @@
-local sumneko_root_path = "/home/kishan//servers//lua-language-server"
+--local sumneko_root_path = "/home/kishan//servers//lua-language-server"
+--local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
+local sumneko_root_path = "/home/kishan/.installation/servers/lua/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 
 require("lspconfig").sumneko_lua.setup({
@@ -8,7 +10,7 @@ require("lspconfig").sumneko_lua.setup({
             runtime = {
                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
                 diagnostics = {
-                    globals = {"vim"}
+                    globals = { "vim" }
                 },
                 version = "LuaJIT",
                 -- Setup your lua path
@@ -30,25 +32,25 @@ require("lspconfig").sumneko_lua.setup({
 })
 
 require("lspconfig").pyright.setup({
- cmd = { "pyright-langserver", "--stdio" },
- filetypes = { "python" },
+    cmd = { "pyright-langserver", "--stdio" },
+    filetypes = { "python" },
     --root_dir = function(startpath)
     --       return M.search_ancestors(startpath, matcher)
     --  end,
     settings = {
-      python = {
-        analysis = {
-          autoSearchPaths = true,
-          diagnosticMode = "workspace",
-          useLibraryCodeForTypes = true
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = "workspace",
+                useLibraryCodeForTypes = true
+            },
         },
-      },
     },
     single_file_support = true
 })
 require("lspconfig").gopls.setup({
-    on_attach = function ()
-        vim.keymap.set("n","K",vim.lsp.buf.hover,{buffer = 0})
+    on_attach = function()
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
     end,
     cmd = { "gopls", "serve" }, settings = {
         gopls = {
@@ -60,3 +62,5 @@ require("lspconfig").gopls.setup({
     },
 })
 
+require('lspconfig').bashls.setup {
+}

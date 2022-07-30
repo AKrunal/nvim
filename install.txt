@@ -1,6 +1,0 @@
-sudo npm install -g npm
-sudo apt install node 
-sudo apt install python3-nvim
-pip install  pynvim
-sudo apt install ripgrep
-npm install -g pyright

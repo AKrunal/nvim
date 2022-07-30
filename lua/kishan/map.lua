@@ -40,6 +40,7 @@ mapping("n", "<C-l>", "<C-w><C-l>", { silent = true })
 mapping("n", "<F1>", "<cmd>lua require('telescope.builtin').help_tags(require('telescope.themes').get_ivy())<cr>",
     { silent = true })
 mapping("n", "<F2>", "<Plug>(coc-rename)", { silent = false })
+mapping("n", "<F4>", ":UndotreeToggle<cr>", { silent = false })
 -- f3 is the map for harpoon.lua
 
 
@@ -60,3 +61,4 @@ mapping("n", "<leader>pt", "<Plug>PlenaryTestFile<cr>", { silent = true })
 mapping("n", "<F10>", ":lua require('runner').run()<cr>", { silent = true })
 
 mapping("n", "<leader><leader>x", ":w<cr> |:source %<cr>")
+mapping("n", "<leader><leader>", ":silent noh<cr>")
